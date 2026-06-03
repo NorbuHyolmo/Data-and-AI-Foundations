@@ -25,19 +25,23 @@ def pass_fail_status(marks):
 
 def grading_system(percentage):
     if percentage >= 90:
-        return 'A'
+        return 'A+'
     elif percentage >= 80:
-        return 'B'
+        return 'A'
     elif percentage >= 70:
-        return 'C'
+        return 'B+'
     elif percentage >= 60:
+        return 'B'
+    elif percentage >= 50:
+        return 'C'
+    elif percentage >= 40:
         return 'D'
     else:
         return 'F'
     
 
 def distinction_reward(percentage):
-    if percentage >= 90:
+    if percentage >= 80:
         return 'Distinction | Great Work!'
     else:
         return "Satisfactory" if percentage >= 60 else "Needs Improvement"
@@ -64,9 +68,7 @@ def report_card():
     double_line = "=" * 60
 
     print(double_line)
-    print("")
     print(f"                Student's Report Card")
-    print("")
     print(double_line)
     print(f"Name: {student_info['name'].capitalize()}       |        Roll Number: {student_info['roll_number']}")
     print(single_line)
